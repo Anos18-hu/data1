@@ -24,48 +24,52 @@ export const USERS_DATA: UserAccount[] = [
     isActive: true
   },
   { 
-    username: 'gosp01', 
-    password: 'gosp20250a', 
-    role: 'user', 
-    fullName: 'سعاد أحمدي', 
-    position: 'مستشار التوجيه المدرسي', 
-    employeeId: 'GSP-2025-012', 
-    email: 's.ahmadi@edu-analytics.dz',
-    joinDate: '2022-01-15',
-    isActive: true
-  },
-  { 
-    username: 'gosp02', 
-    password: 'gosp202221a', 
-    role: 'user', 
-    fullName: 'محمد بن سالم', 
-    position: 'مستشار التوجيه والارشاد', 
-    employeeId: 'GSP-2025-013', 
-    email: 'm.salem@edu-analytics.dz',
-    joinDate: '2023-11-10',
-    isActive: true
-  }
-{
-  username: 'gosp03',
-  password: 'gosp2025b',
-  role: 'user',
-  fullName: 'ليلى بن يوسف',
-  position: 'مستشارة التوجيه المدرسي',
-  employeeId: 'GSP-2025-014',
-  email: 'l.benyoussef@edu-analytics.dz',
-  joinDate: '2024-02-20',
-  isActive: true
-}
-{
-  username: 'gosp04',
-  password: 'gosp2020b',
-  role: 'user',
-  fullName: 'ليلى بن يوسف',
-  position: 'مستشارة التوجيه المدرسي',
-  employeeId: 'GSP-2025-015',
-  email: 'l.benyoussef@edu-analytics.dz',
-  joinDate: '2024-02-20',
-  isActive: true
+    },
+    {
+      username: 'gosp03',
+      password: 'gosp2025b',
+      role: 'user',
+      fullName: 'ليلى بن يوسف',
+      position: 'مستشارة التوجيه المدرسي',
+      employeeId: 'GSP-2025-014',
+      email: 'l.benyoussef@edu-analytics.dz',
+      joinDate: '2024-02-20',
+      isActive: true
+    },
+    {
+      username: 'gosp04',
+      password: 'gosp2020b',
+      role: 'user',
+      fullName: 'ليلى بن يوسف',
+      position: 'مستشارة التوجيه المدرسي',
+      employeeId: 'GSP-2025-015',
+      email: 'l.benyoussef@edu-analytics.dz',
+      joinDate: '2024-02-20',
+      isActive: true
+    },
+    {
+      username: 'gosp05',
+      password: 'gosp2024c',
+      role: 'user',
+      fullName: 'ليلى بن يوسف',
+      position: 'مستشارة التوجيه المدرسي',
+      employeeId: 'GSP-2025-016',
+      email: 'l.benyoussef@edu-analytics.dz',
+      joinDate: '2024-02-20',
+      isActive: true
+    },
+    {
+      username: 'gosp06',
+      password: 'gosp2025f',
+      role: 'user',
+      fullName: 'أحمد الطيب',
+      position: 'مستشار التوجيه المدرسي',
+      employeeId: 'GSP-2025-017',
+      email: 'a.tayeb@edu-analytics.dz',
+      joinDate: '2025-12-01',
+      isActive: true
+    }
+  ];
 }
 {
   username: 'gosp05',
