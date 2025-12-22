@@ -45,4 +45,44 @@ export const USERS_DATA: UserAccount[] = [
     joinDate: '2023-11-10',
     isActive: true
   }
+{
+  username: 'gosp03',
+  password: 'gosp2025b',
+  role: 'user',
+  fullName: 'ليلى بن يوسف',
+  position: 'مستشارة التوجيه المدرسي',
+  employeeId: 'GSP-2025-014',
+  email: 'l.benyoussef@edu-analytics.dz',
+  joinDate: '2024-02-20',
+  isActive: true
+}
+{
+  username: 'gosp04',
+  password: 'gosp2020b',
+  role: 'user',
+  fullName: 'ليلى بن يوسف',
+  position: 'مستشارة التوجيه المدرسي',
+  employeeId: 'GSP-2025-015',
+  email: 'l.benyoussef@edu-analytics.dz',
+  joinDate: '2024-02-20',
+  isActive: true
+}
+{
+  username: 'gosp05',
+  password: 'gosp2024c',
+  role: 'user',
+  fullName: 'ليلى بن يوسف',
+  position: 'مستشارة التوجيه المدرسي',
+  employeeId: 'GSP-2025-016',
+  email: 'l.benyoussef@edu-analytics.dz',
+  joinDate: '2024-02-20',
+  isActive: true
+}
+
+
+
+
+
+
+
 ];
