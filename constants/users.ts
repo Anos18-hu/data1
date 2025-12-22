@@ -69,8 +69,8 @@ export const USERS_DATA: UserAccount[] = [
       joinDate: '2025-12-01',
       isActive: true
     }
-  ];
-}
+  
+
 {
   username: 'gosp05',
   password: 'gosp2024c',
