@@ -62,21 +62,10 @@ enum Tab {
 }
 
 const App: React.FC = () => {
-  const [allUsers, setAllUsers] = useState<UserAccount[]>(() => {
-    const saved = localStorage.getItem('system_users');
-    if (!saved) return USERS_DATA;
-    try {
-      const savedUsers: UserAccount[] = JSON.parse(saved);
-      const map = new Map<string, UserAccount>(savedUsers.map(u => [u.username, u]));
-      // Add any missing users from USERS_DATA without overwriting stored entries
-      USERS_DATA.forEach(u => {
-        if (!map.has(u.username)) map.set(u.username, u);
-      });
-      return Array.from(map.values());
-    } catch {
-      return USERS_DATA;
-    }
-  });
+  // USERS_DATA is the single source of truth for accounts.
+  // Do not read or persist `system_users` in localStorage; keep localStorage
+  // reserved for the session (`currentUser`) only.
+  const [allUsers, setAllUsers] = useState<UserAccount[]>(() => USERS_DATA);
 
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(() => {
     const saved = localStorage.getItem('currentUser');
@@ -94,9 +83,8 @@ const App: React.FC = () => {
   const [showProfile, setShowProfile] = useState(false);
   const [forceEnter, setForceEnter] = useState(false);
 
-  useEffect(() => {
-    localStorage.setItem('system_users', JSON.stringify(allUsers));
-  }, [allUsers]);
+  // previously the app persisted all users to localStorage under `system_users`.
+  // That behavior is removed to keep `USERS_DATA` as the single source.
 
   useEffect(() => {
     if (currentUser) {
