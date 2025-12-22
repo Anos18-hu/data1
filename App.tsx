@@ -64,7 +64,18 @@ enum Tab {
 const App: React.FC = () => {
   const [allUsers, setAllUsers] = useState<UserAccount[]>(() => {
     const saved = localStorage.getItem('system_users');
-    return saved ? JSON.parse(saved) : USERS_DATA;
+    if (!saved) return USERS_DATA;
+    try {
+      const savedUsers: UserAccount[] = JSON.parse(saved);
+      const map = new Map<string, UserAccount>(savedUsers.map(u => [u.username, u]));
+      // Add any missing users from USERS_DATA without overwriting stored entries
+      USERS_DATA.forEach(u => {
+        if (!map.has(u.username)) map.set(u.username, u);
+      });
+      return Array.from(map.values());
+    } catch {
+      return USERS_DATA;
+    }
   });
 
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(() => {

@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Lock, User, LogIn, GraduationCap, AlertCircle, ShieldAlert } from 'lucide-react';
-import { UserAccount } from '../constants/users';
+import { UserAccount, USERS_DATA } from '../constants/users';
 
 interface LoginProps {
   onLogin: (user: UserAccount) => void;
@@ -13,6 +13,7 @@ const Login: React.FC<LoginProps> = ({ onLogin, users }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<{ type: 'auth' | 'status', text: string } | null>(null);
   const [loading, setLoading] = useState(false);
+  console.log('USERS COUNT FROM LOGIN:', USERS_DATA.length);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
