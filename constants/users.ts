@@ -198,4 +198,3 @@ export const USERS_DATA: UserAccount[] = [
 
 
 
-];
