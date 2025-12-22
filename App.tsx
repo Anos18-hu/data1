@@ -65,7 +65,7 @@ const App: React.FC = () => {
   // USERS_DATA is the single source of truth for accounts.
   // Do not read or persist `system_users` in localStorage; keep localStorage
   // reserved for the session (`currentUser`) only.
-  const [allUsers, setAllUsers] = useState<UserAccount[]>(() => USERS_DATA);
+  const [allUsers, setAllUsers] = useState<UserAccount[]>(USERS_DATA);
 
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(() => {
     const saved = localStorage.getItem('currentUser');
